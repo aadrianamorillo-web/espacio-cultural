@@ -1,66 +1,56 @@
 
 ---
 import Layout from "../layouts/Layout.astro";
+import Tarjeta from "../components/Tarjeta.astro";
 ---
 
 <Layout titulo="Talleres">
-  <section class="talleres">
+  <section class="encabezado-pagina">
+    <p class="etiqueta">APRENDE · CREA · COMPARTE</p>
     <h1>Nuestros talleres</h1>
-    <p>Descubre nuevas actividades para desarrollar tu creatividad.</p>
+    <p>
+      Encuentra tu pasión y desarrolla nuevas habilidades
+      en un ambiente creativo y colaborativo.
+    </p>
+  </section>
+
+  <section class="contenido">
+    <h2>Actividades para descubrir</h2>
 
     <div class="tarjetas">
-      <article class="tarjeta">
-        <h2>Pintura</h2>
-        <p>Aprende técnicas de dibujo, colores y pintura.</p>
-      </article>
+      <Tarjeta
+        titulo="Pintura y dibujo"
+        descripcion="Explora colores, técnicas de dibujo y pintura. Ideal para desarrollar tu creatividad."
+      />
+      <Tarjeta
+        titulo="Fotografía creativa"
+        descripcion="Aprende composición, iluminación y cómo contar historias a través de imágenes."
+      />
+      <Tarjeta
+        titulo="Música y ritmo"
+        descripcion="Descubre instrumentos, experimenta con sonidos y disfruta creando música."
+      />
+      <Tarjeta
+        titulo="Teatro y expresión"
+        descripcion="Trabaja la expresión corporal, la imaginación y la interpretación en grupo."
+      />
+      <Tarjeta
+        titulo="Cerámica artesanal"
+        descripcion="Crea piezas únicas con tus manos y conoce diferentes técnicas artesanales."
+      />
+      <Tarjeta
+        titulo="Escritura creativa"
+        descripcion="Inventa historias, desarrolla personajes y expresa tus ideas a través de las palabras."
+      />
+    </div>
 
-      <article class="tarjeta">
-        <h2>Música</h2>
-        <p>Explora ritmos, sonidos y expresión musical.</p>
-      </article>
-
-      <article class="tarjeta">
-        <h2>Fotografía</h2>
-        <p>Aprende a capturar momentos e historias.</p>
-      </article>
-
-      <article class="tarjeta">
-        <h2>Teatro</h2>
-        <p>Desarrolla tu imaginación y expresión corporal.</p>
-      </article>
+    <div class="llamada">
+      <h2>¡Anímate a participar!</h2>
+      <p>
+        Cada taller es una oportunidad para aprender
+        y compartir con la comunidad.
+      </p>
+      <a class="boton" href="/nosotros">Conoce nuestra organización</a>
     </div>
   </section>
 </Layout>
-
-<style>
-  .talleres {
-    max-width: 1100px;
-    margin: auto;
-    padding: 50px 20px;
-    text-align: center;
-  }
-
-  .tarjetas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-  }
-
-  .tarjeta {
-    padding: 25px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-  }
-
-  .tarjeta h2 {
-    color: #956b35;
-  }
-
-  @media (max-width: 600px) {
-    .tarjetas {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>

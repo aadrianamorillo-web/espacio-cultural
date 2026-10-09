@@ -1,47 +1,50 @@
+
 ---
 import Layout from "../layouts/Layout.astro";
+import Tarjeta from "../components/Tarjeta.astro";
 ---
 
 <Layout titulo="Inicio">
   <section class="hero">
-    <h1>Bienvenidos a Lumen Cultural</h1>
-    <p>Un espacio para descubrir el arte, la cultura y la creatividad.</p>
-    <a href="/talleres">Conoce nuestros talleres</a>
+    <div class="hero-contenido">
+      <p class="etiqueta">ARTE · CULTURA · COMUNIDAD</p>
+      <h1>La creatividad nos une</h1>
+      <p>
+        Descubre un espacio donde el arte, la cultura
+        y las personas se encuentran para crear algo único.
+      </p>
+      <a class="boton" href="/talleres">Explorar talleres</a>
+    </div>
   </section>
 
   <section class="contenido">
-    <h2>Arte, cultura y comunidad</h2>
+    <p class="etiqueta">DESCUBRE LUMEN</p>
+    <h2>Un lugar para expresarte</h2>
     <p>
-      Ofrecemos actividades para aprender, crear y compartir
-      nuevas experiencias culturales.
+      Creemos que todas las personas tienen algo creativo
+      que compartir. Por eso ofrecemos actividades para
+      aprender, experimentar y conectar con otros.
     </p>
+
+    <div class="tarjetas">
+      <Tarjeta
+        titulo="Arte y pintura"
+        descripcion="Experimenta con colores, dibujos y técnicas artísticas."
+      />
+      <Tarjeta
+        titulo="Música"
+        descripcion="Descubre sonidos, ritmos y nuevas formas de expresión."
+      />
+      <Tarjeta
+        titulo="Fotografía"
+        descripcion="Aprende a capturar momentos y contar historias."
+      />
+    </div>
+
+    <div class="llamada">
+      <h2>Tu próxima idea comienza aquí</h2>
+      <p>Ven a conocer nuestras actividades culturales.</p>
+      <a class="boton" href="/nosotros">Conócenos</a>
+    </div>
   </section>
 </Layout>
-
-<style>
-  .hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: #eee5d8;
-  }
-
-  h1 {
-    color: #292b35;
-    font-size: 2.5rem;
-  }
-
-  .hero a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background: #292b35;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-  }
-
-  .contenido {
-    padding: 40px 20px;
-    text-align: center;
-  }
-</style>

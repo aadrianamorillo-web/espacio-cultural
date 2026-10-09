@@ -1,140 +1,229 @@
+
+/* Configuración general */
 * {
   box-sizing: border-box;
-  }
-
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-background: #faf8f4;
-color: #292b35;
-line-height: 1.6;
 }
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #faf7f2;
+  color: #302a26;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  color: #6d625a;
+}
+
+/* Navegación */
 .navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 8%;
-background: #292b35;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #302a26;
 }
 
 .logo {
-color: #ffffff;
-font-size: 22px;
-font-weight: bold;
-text-decoration: none;
+  color: #fffaf4;
+  font-size: 23px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .enlaces {
-display: flex;
-gap: 24px;
+  display: flex;
+  gap: 25px;
 }
 
 .enlaces a {
-color: #ffffff;
-text-decoration: none;
+  color: #fffaf4;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
 .enlaces a:hover {
-color: #e6bd78;
+  color: #e8b78b;
 }
 
+/* Portada de Inicio */
 .hero {
-text-align: center;
-padding: 90px 20px;
-background: #eee5d8;
+  padding: 100px 8%;
+  background: linear-gradient(120deg, #f0dfcd, #e8c6a7);
+}
+
+.hero-contenido {
+  max-width: 750px;
 }
 
 .hero h1 {
-font-size: 42px;
-max-width: 700px;
-margin: 15px auto;
-line-height: 1.2;
+  max-width: 650px;
+  margin: 15px 0;
 }
 
 .hero p {
-margin-bottom: 25px;
+  max-width: 580px;
 }
 
+/* Textos destacados */
 .etiqueta {
-color: #956b35;
-font-weight: bold;
-letter-spacing: 2px;
+  color: #9a593d;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
+/* Botones */
 .boton {
-display: inline-block;
-background: #292b35;
-color: white;
-padding: 12px 22px;
-border-radius: 6px;
-text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  border-radius: 6px;
+  background: #8f4f35;
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s;
 }
 
 .boton:hover {
-background: #494c5a;
+  background: #683824;
 }
 
+/* Contenido general */
 .contenido {
-padding: 55px 8%;
-max-width: 1200px;
-margin: auto;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 8%;
 }
 
-.contenido h1,
-.contenido h2 {
-margin-bottom: 15px;
+/* Encabezados de Talleres y Nosotros */
+.encabezado-pagina {
+  padding: 65px 8%;
+  text-align: center;
+  background: #f0dfcd;
 }
 
+.encabezado-pagina h1 {
+  margin: 12px 0;
+}
+
+.encabezado-pagina p {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Tarjetas */
 .tarjetas {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 22px;
-margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 35px;
 }
 
 .tarjeta {
-background: #ffffff;
-padding: 25px;
-border: 1px solid #e2ddd4;
-border-radius: 10px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #eadfd4;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px #302a260b;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px #302a2615;
 }
 
 .tarjeta h3 {
-color: #956b35;
+  margin-bottom: 10px;
+  color: #8f4f35;
 }
 
-.nosotros {
-max-width: 900px;
-min-height: 450px;
+.tarjeta p {
+  margin-bottom: 0;
 }
 
+.icono-tarjeta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f5e6d8;
+  color: #8f4f35;
+  font-size: 25px;
+}
+
+/* Bloque final */
+.llamada {
+  margin-top: 55px;
+  padding: 35px;
+  border-radius: 12px;
+  background: #efe3d7;
+  text-align: center;
+}
+
+/* Pie de página */
 .footer {
-background: #292b35;
-color: white;
-padding: 22px;
-text-align: center;
+  padding: 25px;
+  background: #302a26;
+  color: #fffaf4;
+  text-align: center;
 }
 
 .footer p {
-margin: 5px;
+  margin: 5px;
+  color: #e5d9ce;
 }
 
-@media (max-width: 600px) {
-.navbar {
-flex-direction: column;
-gap: 15px;
+/* Adaptación a celulares */
+@media (max-width: 800px) {
+  .tarjetas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navbar {
+    padding: 20px 5%;
+  }
 }
 
-.enlaces {
-gap: 15px;
-}
+@media (max-width: 550px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-.hero h1 {
-font-size: 32px;
-}
+  .enlaces {
+    gap: 16px;
+  }
 
-.tarjetas {
-grid-template-columns: 1fr;
-}
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 65px 7%;
+  }
+
+  .contenido {
+    padding: 40px 7%;
+  }
+
+  .llamada {
+    padding: 25px 18px;
+  }
 }

@@ -4,37 +4,58 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout titulo="Nosotros">
-  <section class="nosotros">
-    <h1>Sobre nosotros</h1>
-
+  <section class="encabezado-pagina">
+    <p class="etiqueta">NUESTRA ESENCIA</p>
+    <h1>La cultura nos conecta</h1>
     <p>
-      Lumen Cultural es una organización ficticia dedicada a promover
-      el arte, la cultura y la creatividad.
-    </p>
-
-    <h2>Nuestra misión</h2>
-    <p>
-      Acercar el arte a las personas mediante talleres y actividades
-      culturales para toda la comunidad.
-    </p>
-
-    <h2>Nuestra visión</h2>
-    <p>
-      Crear un espacio inclusivo donde todos puedan aprender,
-      expresarse y compartir sus talentos.
+      Somos una organización cultural ficticia que busca
+      acercar el arte a todas las personas.
     </p>
   </section>
+
+  <section class="contenido">
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      Lumen Cultural nace como una iniciativa para crear
+      espacios de encuentro, aprendizaje y expresión.
+      A través de talleres y actividades, queremos que
+      cada persona pueda descubrir sus talentos,
+      compartir experiencias y desarrollar su creatividad.
+    </p>
+
+    <div class="tarjetas">
+      <article class="tarjeta">
+        <h3>Nuestra misión</h3>
+        <p>
+          Promover el arte y la cultura mediante experiencias
+          educativas, creativas e inclusivas para la comunidad.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Nuestra visión</h3>
+        <p>
+          Ser un espacio reconocido por fomentar la creatividad,
+          la participación y el acceso a la cultura.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Nuestros valores</h3>
+        <p>
+          Creatividad, respeto, colaboración, inclusión
+          y compromiso con la comunidad.
+        </p>
+      </article>
+    </div>
+
+    <div class="llamada">
+      <h2>La cultura es para todos</h2>
+      <p>
+        Queremos construir una comunidad donde cada idea
+        tenga un espacio para crecer.
+      </p>
+      <a class="boton" href="/talleres">Descubre los talleres</a>
+    </div>
+  </section>
 </Layout>
-
-<style>
-  .nosotros {
-    max-width: 900px;
-    margin: auto;
-    padding: 50px 25px;
-    line-height: 1.8;
-  }
-
-  h1, h2 {
-    color: #956b35;
-  }
-</style>
