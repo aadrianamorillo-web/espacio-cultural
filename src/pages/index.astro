@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout titulo="Inicio">
+  <section class="hero">
+    <h1>Bienvenidos a Lumen Cultural</h1>
+    <p>Un espacio para descubrir el arte, la cultura y la creatividad.</p>
+    <a href="/talleres">Conoce nuestros talleres</a>
+  </section>
+
+  <section class="contenido">
+    <h2>Arte, cultura y comunidad</h2>
+    <p>
+      Ofrecemos actividades para aprender, crear y compartir
+      nuevas experiencias culturales.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #eee5d8;
+  }
+
+  h1 {
+    color: #292b35;
+    font-size: 2.5rem;
+  }
+
+  .hero a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #292b35;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+
+  .contenido {
+    padding: 40px 20px;
+    text-align: center;
+  }
+</style>

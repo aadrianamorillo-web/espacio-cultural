@@ -1,0 +1,67 @@
+
+---
+import "../styles.css";
+
+const { titulo = "Lumen Cultural" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{titulo} | Lumen Cultural</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/talleres">Talleres</a>
+        <a href="/nosotros">Nosotros</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <p>Lumen Cultural © 2026</p>
+      <p>Arte, cultura y comunidad.</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  header {
+    background-color: #292b35;
+    padding: 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: #e6bd78;
+  }
+
+  main {
+    min-height: 70vh;
+  }
+
+  footer {
+    background-color: #292b35;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+</style>
